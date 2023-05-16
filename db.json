@@ -1,0 +1,50 @@
+{"pokemon": [
+    {
+        "id": 1,
+        "name": "Flareon",
+        "type": "Fire",
+        "description": "The coziest of the bunch, able to burn all those who touch it."
+    },
+    {
+        "id": 2,
+        "name": "Jolteon",
+        "type": "Electric",
+        "description": "The zappiest of boys."
+    },
+    {
+        "id": 3,
+        "name": "Vaporeon",
+        "type": "Water",
+        "description": "The silliest, and most moist baby."
+    },
+    {
+        "id": 4,
+        "name": "Espeon",
+        "type": "Psychic",
+        "description": "Able to feed itself using its tetekenetic abilities."
+    },
+    {
+        "id": 5,
+        "name": "Umbreon",
+        "type": "Dark",
+        "description": "The best doge born on the moon, and sent to us as god's gracious dark angel."
+    },
+    {
+        "id": 6,
+        "name": "Glaceon",
+        "type": "Ice",
+        "description": "The coldest of little girls, and is able to freeze solid all that it touches."
+    },
+    {
+        "id": 7,
+        "name": "Leafeon",
+        "type": "Grass",
+        "description": "It's a leaf."
+    },
+    {
+        "id": 8,
+        "name": "Sylveon",
+        "type": "Fairy",
+        "description": "It do got a giant bow though."
+    }
+]}
