@@ -21,45 +21,42 @@ fetch("db.json")
         displayPokemons(filteredPokemons);
     });
 
-
+    displayPokemons(pokemons);
 });
 
+function displayPokemons(pokemons) {
+    pokemonList.textContent = '';
 
+    pokemons.forEach(pokemons => {
+            const card = document.createElement('div');
+            card.classList.add('pokemon-card');
 
-    
+            const name = document.createElement('h2');
+            name.classList.add('pokemon-name');
+            name.textContent = pokemons.name;
 
-        pokemonList.textContent = '';
+            const image = document.createElement('img');
+            image.classList.add('pokemon-image');
+            image.src = pokemons.image;
+            image.alt = pokemons.name;
 
-        filteredPokemons.forEach(pokemons => {
-            const container = document.createElement('div');
-
-            const pokemonName = document.createElement('h2');
-            pokemonName.textContent = pokemons.name;
-
-            const pokemonImage = document.createElement('img');
-            pokemonImage.src = pokemons.image;
-            pokemonImage.alt = pokemons.name;
-
-            const pokemonType = document.createElement('p');
+            const type = document.createElement('p');
             pokemonType.textContent = `Type: ${pokemons.type}`;
 
-            const pokemonDescription = document.createElement('p');
-            pokemonDescription.textContent = pokemons.description;
+            const description = document.createElement('p');
+            description.classList.add('pokemon-description');
+            description.textContent = pokemons.description;
 
-            container.appendChild(pokemonName);
-            container.appendChild(pokemonImage);
-            container.appendChild(pokemonType);
-            container.appendChild(pokemonDescription);
+            card.appendChild(name);
+            card.appendChild(image);
+            card.appendChild(type);
+            card.appendChild(description);
 
-            document.getElementById('search-results').appendChild(container);
+            pokemonList.appendChild(card);
 
-            // const listItem = document.createElement('li');
-            // listItem.textContent = pokemons.name;
-            // pokemonList.appendChild(listItem);
+            
         });
-     });
-
-    searchInput.value = '';
-
 }
+
+    
 
