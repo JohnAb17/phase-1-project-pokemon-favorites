@@ -88,17 +88,17 @@ fetch('db.json')
   .then(response => response.json())
   .then(data => {
     const pokemons = data.pokemons;
-
+//adds an event listener for our search form when submit is pressed
     searchForm.addEventListener('submit', function(event) {
       event.preventDefault();
 
       const searchQuery = searchInput.value.toLowerCase();
-
+//filters through the pokemon using our searchQuery
       const filteredPokemons = pokemons.filter(pokemon =>
         pokemon.name.toLowerCase().includes(searchQuery)
       );
-
-      displayPokemons(filteredPokemons);
+//displays the pokemon once they have been filtered
+      //displayPokemons(filteredPokemons);
     });
 
     displayPokemons(pokemons);
