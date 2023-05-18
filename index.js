@@ -54,9 +54,9 @@ const displayPokemon = pokemon => {
     }
 }
 
-function getRandomPokemon(pokemonCard) {
-    const randomIndex = Math.floor(Math.random() * pokemonCard.length);
-    return pokemonCard[randomIndex];
+function getRandomPokemon(pokemons) {
+    const randomIndex = Math.floor(Math.random() * pokemons.length);
+    return pokemons[randomIndex];
 }
 
 fetch("db.json")
