@@ -6,12 +6,12 @@ A web app meant to pull up details on specific fan-favorite Pokemons from the Ee
 
 The imageAI Stablecog was used to generate realistic images of the pokemon to use freely within this web app without copyright restrictions. Using some creative input, users are able to develop one of a kind images built by this imageAI. You can be as specific as possible (A clown running around the park, holding an ice cream cone, while a little girl in a pink dress is crying in the background, because she dropped her ice cream) to create an even more refined image, but you can use a few simple words (A bird is flying above a worm) to still develop one of a kind art pieces. The website URL: 
 
-Usage:
-1. Type in the name of the Eeveelution you'd liked to see (example: Umbreon) , or if you don't fully recall the name, try typing out most of it's name or a letter that is within the name of your favorite Eeveelution
-2. Hit the submit button, or click the 'Enter' key once you've typed into the search bar
-3. Your chosen pokemon(s) should be displayed as the only card(s) now on the web app
-4. For your added viewing pleasure, there is a way to view the image larger than it is, and you simple hover your mouse over the card to do so.
-5. This project is hosted by GitHub Pages so there's no need to download any installations
+Usage: 
+1. To go to my project, first you must click on this link to get started: https://johnab17.github.io/phase-1-project-pokemon-favorites/? (This project is hosted by GitHub Pages so there's no need to download any installations)
+2. Type in the name of the Eeveelution you'd liked to see (example: Umbreon) , or if you don't fully recall the name, try typing out most of it's name or a letter that is within the name of your favorite Eeveelution
+3. Hit the submit button, or click the 'Enter' key once you've typed into the search bar
+4. Your chosen pokemon(s) should be displayed as the only card(s) now on the web app
+5. For your added viewing pleasure, there is a way to view the image larger than it is, and you simple hover your mouse over the card to do so.
 
 Roadmap: 
 1. Add images for the various types of pokemon featured on the web app to increase aesthetic
