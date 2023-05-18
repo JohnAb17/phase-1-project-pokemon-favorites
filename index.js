@@ -8,6 +8,7 @@ fetch("db.json")
 .then(response => response.json())
 .then(data => {
     const pokemons = data.pokemons;
+    displayPokemons(null);
 
     searchForm.addEventListener('submit', function(event) {
         event.preventDefault();
@@ -20,8 +21,6 @@ fetch("db.json")
         
         displayPokemons(findPokemons);
     });
-
-    displayPokemons(null);
 });
 
 function displayPokemons(pokemon) {
