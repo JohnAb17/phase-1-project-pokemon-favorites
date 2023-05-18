@@ -1,6 +1,6 @@
 console.log("index.js is working!")
 
-fetch("http://localhost:3000/pokemons")
+fetch("db.json")
 .then(response => response.json())
 .then(pokemons => {
     console.log(pokemons);
