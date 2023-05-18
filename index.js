@@ -2,7 +2,7 @@ console.log("index.js is working!")
 
 const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
-const pokemonList = document.getElementById('pokemonList');
+const pokemonCard = document.getElementById('pokemonCard');
 
 fetch("db.json")
 .then(response => response.json())
