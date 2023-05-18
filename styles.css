@@ -42,7 +42,13 @@ body {
     margin-top: 10px;
 }
 
+.pokemon-type {
+    margin-top : 5px;
+}
 
+.pokemon-description {
+    margin-top: 10px;
+}
 
 h1 {
     text-align: center;
