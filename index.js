@@ -14,20 +14,20 @@ function handleSearch(event, pokemons) {
     );
           
     displayPokemons(findPokemons);
-  }
+}
   
 fetch("db.json")
 .then(response => response.json())
 .then(data => {
     const pokemons = data.pokemons;
-    displayPokemons(null);
+    // displayPokemons(null);
 
     searchForm.addEventListener('submit', event => handleSearch(event, pokemons)); 
         
 });
 
 function displayPokemons(pokemon) {
-    pokemonCard.textContent = '';
+    // pokemonCard.textContent = '';
 
     if (pokemon) {
             const card = document.createElement('div');
