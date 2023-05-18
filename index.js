@@ -24,7 +24,12 @@ fetch("db.json")
     // displayPokemons(null);
 
     searchForm.addEventListener('submit', event => handleSearch(event, pokemons)); 
-        
+    
+    searchInput.addEventListener('keydown', event => {
+        if (event.key === 'Enter') {
+            handleSearch(event, pokemons);
+        }
+    })
 });
 
 function displayPokemons(pokemon) {
