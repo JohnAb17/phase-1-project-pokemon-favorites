@@ -60,6 +60,11 @@ h2 {
     background-color: rgb(168, 191, 214);
 } */
 
+ body {
+    background-color: lightblue;
+}
+
+
 h1 {
     text-align: center;
     background-color: rgb(168, 191, 214);
