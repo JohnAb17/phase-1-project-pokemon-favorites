@@ -10,9 +10,9 @@ body {
 }
 
 #search-input {
-    width: fit-content;
+    width: 300px;
     box-sizing: border-box;
-    text-align: center;
+    font-size: 16px;
 }
 
 h1 {
