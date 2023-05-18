@@ -135,3 +135,10 @@ function displayPokemons(pokemons) {
     pokemonList.appendChild(card);
   });
 }
+
+const toggleButton = document.getElementById('toggleButton');
+const container = document.querySelector('container');
+
+toggleButton.addEventListener('click', function(){
+    container.classList.toggle('dark-mode')
+})

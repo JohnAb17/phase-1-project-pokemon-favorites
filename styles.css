@@ -60,6 +60,16 @@ h2 {
     background-color: rgb(168, 191, 214);
 } */
 
+h1 {
+    text-align: center;
+    background-color: rgb(168, 191, 214);
+}
+
+h2 {
+    text-align: center;
+    background-color: rgb(168, 191, 214);
+}
+
 #search-form {
     display: flex;
     justify-content: center;
@@ -85,6 +95,7 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 5px;
     text-align: center;
+    background-color: white;
   }
   
   .pokemon-image {
@@ -105,4 +116,15 @@ h2 {
   
   .pokemon-description {
     margin-top: 10px;
+  }
+
+  .container {
+    background-color: #fff;
+    color: #000;
+    padding: 20px;
+  }
+
+  .dark-mode {
+    background-color: #222;
+    color: #fff;
   }
