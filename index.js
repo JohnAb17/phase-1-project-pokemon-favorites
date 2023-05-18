@@ -4,23 +4,26 @@ const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 const pokemonCard = document.getElementById('pokemonCard');
 
+function handleSearch(event, pokemons) {
+    event.preventDefault();
+          
+    const searchQuery = searchInput.value.toLowerCase();
+  
+    const findPokemons = pokemons.find(pokemon =>
+      pokemon.name.toLowerCase().includes(searchQuery)
+    );
+          
+    displayPokemons(findPokemons);
+  }
+  
 fetch("db.json")
 .then(response => response.json())
 .then(data => {
     const pokemons = data.pokemons;
     displayPokemons(null);
 
-    searchForm.addEventListener('submit', function(event) {
-        event.preventDefault();
+    searchForm.addEventListener('submit', event => handleSearch(event, pokemons)); 
         
-        const searchQuery = searchInput.value.toLowerCase();
-
-        const findPokemons = pokemons.find(pokemon =>
-            pokemon.name.toLowerCase().includes(searchQuery)
-        );
-        
-        displayPokemons(findPokemons);
-    });
 });
 
 function displayPokemons(pokemon) {
