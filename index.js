@@ -79,10 +79,11 @@
 //     });
 // });   
 
+
 const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 const pokemonList = document.getElementById('pokemonList');
-
+//grabs all the data we need from our objects in db.json
 fetch('db.json')
   .then(response => response.json())
   .then(data => {
@@ -105,7 +106,7 @@ fetch('db.json')
 
 function displayPokemons(pokemons) {
   pokemonList.innerHTML = '';
-
+//creating all the info for our cards to be displayed on our webapp
   pokemons.forEach(pokemon => {
     const card = document.createElement('div');
     card.classList.add('pokemon-card');
@@ -114,6 +115,13 @@ function displayPokemons(pokemons) {
     image.classList.add('pokemon-image');
     image.src = pokemon.image;
     image.alt = pokemon.name;
+    // used to enlarge an image when hovered over
+    image.addEventListener('mouseover', function() {
+        image.classList.add('enlarged');
+    });
+    image.addEventListener('mouseout', function() {
+        image.classList.remove('enlarged');
+    });
 
     const name = document.createElement('h2');
     name.classList.add('pokemon-name');
@@ -136,9 +144,9 @@ function displayPokemons(pokemons) {
   });
 }
 
-const toggleButton = document.getElementById('toggleButton');
-const container = document.querySelector('container');
+// const toggleButton = document.getElementById('toggleButton');
+// const container = document.querySelector('container');
 
-toggleButton.addEventListener('click', function(){
-    container.classList.toggle('dark-mode')
-})
+// toggleButton.addEventListener('click', function(){
+//     container.classList.toggle('dark-mode')
+// })

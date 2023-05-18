@@ -118,7 +118,10 @@ h2 {
     margin-top: 10px;
   }
 
-  .container {
+  .enlarged {
+    transform: scale(1.5);
+  }
+  /* .container {
     background-color: #fff;
     color: #000;
     padding: 20px;
@@ -127,4 +130,4 @@ h2 {
   .dark-mode {
     background-color: #222;
     color: #fff;
-  }
+  } */
