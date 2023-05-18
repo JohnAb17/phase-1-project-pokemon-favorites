@@ -15,11 +15,10 @@ function handleSearch(event, pokemons) {
       pokemon.name.toLowerCase().includes(searchQuery)
     );
           
-    displayPokemons(findPokemons);
+    displayPokemon(findPokemons);
 }
 
-
-function displayPokemons(pokemon) {
+function displayPokemon(pokemon) {
     pokemonCard.textContent = '';
 
     if (pokemon) {
@@ -57,9 +56,9 @@ function displayPokemons(pokemon) {
     }
 }
 
-function getRandomPokemon(pokemonList) {
-    const randomIndex = Math.floor(Math.random() * pokemonList.length);
-    return pokemonList[randomIndex];
+function getRandomPokemon(pokemonCard) {
+    const randomIndex = Math.floor(Math.random() * pokemonCard.length);
+    return pokemonCard[randomIndex];
 }
 
 fetch("db.json")
@@ -77,7 +76,7 @@ fetch("db.json")
 
     randomButton.addEventListener('click', function() {
       const randomPokemon = getRandomPokemon(pokemons);
-      displayPokemons(randomPokemon);
+      displayPokemon(randomPokemon);
     });
   });   
 
