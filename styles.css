@@ -21,6 +21,21 @@ body {
     justify-content: center;
 }
 
+.pokemon-card {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.pokemon-image {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
 h1 {
     text-align: center;
     background-color: rgb(168, 191, 214);
