@@ -1,0 +1,2 @@
+1. Display pictures for each pokemon, add images for each to db.json
+2. Make each pokemon image clickable
