@@ -46,6 +46,12 @@ searchForm.addEventListener('submit', function(event) {
         pokemonList.textContent = '';
 
         filteredPokemons.forEach(pokemon => {
+            const container = document.createElement('div');
+
+            const pokemonName = document.createElement('h2');
+            pokemonName.textContent = pokemon.name;
+
+            const pokemonImage = document
             const listItem = document.createElement('li');
             listItem.textContent = pokemon.name;
             pokemonList.appendChild(listItem);
