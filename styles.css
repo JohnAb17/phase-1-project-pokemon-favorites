@@ -36,6 +36,14 @@ body {
     margin: 0 auto;
 }
 
+.pokemon-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+
+
 h1 {
     text-align: center;
     background-color: rgb(168, 191, 214);
