@@ -41,7 +41,8 @@ function displayPokemons(pokemons) {
             image.alt = pokemons.name;
 
             const type = document.createElement('p');
-            pokemonType.textContent = `Type: ${pokemons.type}`;
+            type.classList.add('pokemon-type');
+            type.textContent = `Type: ${pokemons.type}`;
 
             const description = document.createElement('p');
             description.classList.add('pokemon-description');
