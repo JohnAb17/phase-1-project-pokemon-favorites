@@ -33,7 +33,18 @@ const pokemonList = document.getElementById('pokemonList');
 
 searchForm.addEventListener('submit', function(event) {
     event.preventDefault();
+    pokemonSearch();
 
+});
+
+searchInput.addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault();
+        pokemonSearch();
+    }
+})
+
+function pokemonSearch() {
     const searchQuery = searchInput.value;
 
     fetch('db.json')
@@ -76,5 +87,5 @@ searchForm.addEventListener('submit', function(event) {
 
     searchInput.value = '';
 
-});
+}
 
