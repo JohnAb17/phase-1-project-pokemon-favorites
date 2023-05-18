@@ -25,7 +25,7 @@ fetch("db.json")
 });
 
 function displayPokemons(pokemon) {
-    pokemonList.textContent = '';
+    pokemonCard.textContent = '';
 
     if (pokemon) {
             const card = document.createElement('div');
@@ -53,12 +53,12 @@ function displayPokemons(pokemon) {
             card.appendChild(type);
             card.appendChild(description);
 
-            pokemonList.appendChild(card);
+            pokemonCard.appendChild(card);
 
     } else {
         const message = document.createElement('p');
         message.textContent = 'No Pokemon Found, Remember only Eeveelutions here!';
-        pokemonList.appendChild(message);
+        pokemonCard.appendChild(message);
     }
 }
 
