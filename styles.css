@@ -2,6 +2,13 @@ body {
     background-color: lightblue;
 }
 
+#search-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 #search-input {
     width: fit-content;
     box-sizing: border-box;

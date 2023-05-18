@@ -1,6 +1,6 @@
 console.log("index.js is working!")
 
-fetch("db.json")
+fetch("/home/johnkappa/Development/code/phase-1/phase-1-project-pokemon-favorites/db.json")
 .then(response => response.json())
 .then(pokemons => {
     console.log(pokemons);
