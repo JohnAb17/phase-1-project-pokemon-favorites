@@ -5,4 +5,5 @@ body {
 #search-input {
     width: 100%;
     box-sizing: border-box;
+    text-align: center;
 }
