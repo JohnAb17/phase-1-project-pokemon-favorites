@@ -14,8 +14,8 @@ fetch("db.json")
         
         const searchQuery = searchInput.value.toLowerCase;
 
-        const findPokemons = pokemons.find(pokemon =>
-            pokemon.name.toLowerCase().includes(searchQuery)
+        const findPokemons = pokemons.find(pokemons =>
+            pokemons.name.toLowerCase().includes(searchQuery)
         );
         
         displayPokemons(findPokemons);
@@ -24,29 +24,29 @@ fetch("db.json")
     displayPokemons(null);
 });
 
-function displayPokemons(pokemon) {
+function displayPokemons(pokemons) {
     pokemonCard.textContent = '';
 
-    if (pokemon) {
+    if (pokemons) {
             const card = document.createElement('div');
             card.classList.add('pokemon-card');
 
             const image = document.createElement('img');
             image.classList.add('pokemon-image');
-            image.src = pokemon.image;
-            image.alt = pokemon.name;
+            image.src = pokemons.image;
+            image.alt = pokemons.name;
 
             const name = document.createElement('h2');
             name.classList.add('pokemon-name');
-            name.textContent = pokemon.name;
+            name.textContent = pokemons.name;
 
             const type = document.createElement('p');
             type.classList.add('pokemon-type');
-            type.textContent = `Type: ${pokemon.type}`;
+            type.textContent = `Type: ${pokemons.type}`;
 
             const description = document.createElement('p');
             description.classList.add('pokemon-description');
-            description.textContent = pokemon.description;
+            description.textContent = pokemons.description;
 
             card.appendChild(name);
             card.appendChild(image);
