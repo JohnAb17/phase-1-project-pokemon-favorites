@@ -7,11 +7,9 @@ A web app meant to pull up details on specific fan-favorite Pokemons from the Ee
 The imageAI Stablecog was used to generate realistic images of the pokemon to use freely within this web app without copyright restrictions. Using some creative input, users are able to develop one of a kind images built by this imageAI. You can be as specific as possible (A clown running around the park, holding an ice cream cone, while a little girl in a pink dress is crying in the background, because she dropped her ice cream) to create an even more refined image, but you can use a few simple words (A bird is flying above a worm) to still develop one of a kind art pieces. The website URL: 
 
 Usage:
-
-
-
-
-
+1. Type in the name of the Eeveelution you'd liked to see
+2. Hit the submit button, or click the 'Enter' key
+3. Your chosen pokemon should be displayed as a card now on the web app
 
 Roadmap: 
 1. Add images for the various types of pokemon featured on the web app to increase aesthetic

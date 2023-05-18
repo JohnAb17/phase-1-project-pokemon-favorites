@@ -4,6 +4,7 @@ const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 const pokemonCard = document.getElementById('pokemonCard');
 const randomButton = document.getElementById('random-button');
+let pokemons = [];
 
 function handleSearch(event, pokemons) {
     event.preventDefault();
@@ -16,24 +17,10 @@ function handleSearch(event, pokemons) {
           
     displayPokemons(findPokemons);
 }
-  
-fetch("db.json")
-.then(response => response.json())
-.then(data => {
-    const pokemons = data.pokemons;
-    // displayPokemons(null);
 
-    searchForm.addEventListener('submit', event => handleSearch(event, pokemons)); 
-    
-    searchInput.addEventListener('keydown', event => {
-        if (event.key === 'Enter') {
-            handleSearch(event, pokemons);
-        }
-    })
-});
 
 function displayPokemons(pokemon) {
-    // pokemonCard.textContent = '';
+    pokemonCard.textContent = '';
 
     if (pokemon) {
             const card = document.createElement('div');
@@ -70,15 +57,27 @@ function displayPokemons(pokemon) {
     }
 }
 
-randomButton.addEventListener('click', function() {
-    const randomPokemon = getRandomPokemon(pokemons);
-    displayPokemons(randomPokemon);
-});
-
 function getRandomPokemon(pokemonList) {
     const randomIndex = Math.floor(Math.random() * pokemonList.length);
     return pokemonList[randomIndex];
 }
 
-    
+fetch("db.json")
+  .then(response => response.json())
+  .then(data => {
+    pokemons = data.pokemons;
+
+    searchForm.addEventListener('submit', event => handleSearch(event, pokemons));
+
+    searchInput.addEventListener('keydown', event => {
+      if (event.key === 'Enter') {
+        handleSearch(event, pokemons);
+      }
+    });
+
+    randomButton.addEventListener('click', function() {
+      const randomPokemon = getRandomPokemon(pokemons);
+      displayPokemons(randomPokemon);
+    });
+  });   
 
