@@ -17,7 +17,8 @@ fetch("db.json")
         const filteredPokemons = pokemons.filter(pokemon =>
             pokemon.name.toLowerCase().includes(searchQuery)
         );
-
+        
+        displayPokemons(filteredPokemons);
     });
 
 
