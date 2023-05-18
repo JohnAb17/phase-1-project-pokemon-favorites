@@ -5,12 +5,12 @@ fetch("http://localhost:3000/pokemons")
 .then(pokemons => {
     console.log(pokemons);
 
-    pokemons.data.forEach(item => {
-        console.log(item.id);
-        console.log(item.name);
-        console.log(item.image);
-        console.log(item.type);
-        console.log(item.description);
+    // pokemons.data.forEach(item => {
+    //     console.log(item.id);
+    //     console.log(item.name);
+    //     console.log(item.image);
+    //     console.log(item.type);
+    //     console.log(item.description);
         
         //create elemnt to holf id
         //create element to hold the name 
@@ -23,7 +23,7 @@ fetch("http://localhost:3000/pokemons")
         //append list item to container
         
         
-    })
+    //})
 
 });
 
