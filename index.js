@@ -98,10 +98,10 @@ fetch('db.json')
         pokemon.name.toLowerCase().includes(searchQuery)
       );
 //displays the pokemon once they have been filtered
-      //displayPokemons(filteredPokemons);
+      displayPokemons(filteredPokemons);
     });
 
-    displayPokemons(pokemons);
+    //displayPokemons(pokemons);
   });
 
 function displayPokemons(pokemons) {
