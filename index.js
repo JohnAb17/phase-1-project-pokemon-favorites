@@ -1,48 +1,22 @@
 console.log("index.js is working!")
 
-fetch("/home/johnkappa/Development/code/phase-1/phase-1-project-pokemon-favorites/db.json")
-.then(response => response.json())
-.then(pokemons => {
-    console.log(pokemons);
-
-    // pokemons.data.forEach(item => {
-    //     console.log(item.id);
-    //     console.log(item.name);
-    //     console.log(item.image);
-    //     console.log(item.type);
-    //     console.log(item.description);
-        
-        //create elemnt to holf id
-        //create element to hold the name 
-        //create element to hold img
-        //create element to holf type
-        //create element to hold description, p in html
-
-        //create a list item (li) to hold the name and description
-        //append elements to list item
-        //append list item to container
-        
-        
-    //})
-
-});
-
 const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 const pokemonList = document.getElementById('pokemonList');
 
-searchForm.addEventListener('submit', function(event) {
-    event.preventDefault();
-    pokemonSearch();
+fetch("db.json")
+.then(response => response.json())
+.then(data => {
+    const pokemons = data.pokemons;
+
+    searchForm.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+    
+    });
+
 
 });
-
-searchInput.addEventListener('keydown', function(event) {
-    if (event.key === 'Enter') {
-        event.preventDefault();
-        pokemonSearch();
-    }
-})
 
 function pokemonSearch() {
     const searchQuery = searchInput.value;
