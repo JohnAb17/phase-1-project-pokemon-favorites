@@ -3,63 +3,63 @@
     {
         "id": 1,
         "name": "Flareon",
-        "image": "",
+        "image": "pictures/Flareon.jpeg",
         "type": "Fire",
         "description": "The coziest of the bunch, able to burn all those who touch it."
     },
     {
         "id": 2,
         "name": "Jolteon",
-        "image": "",
+        "image": "pictures/Jolteon.jpeg",
         "type": "Electric",
         "description": "The zappiest of boys."
     },
     {
         "id": 3,
         "name": "Vaporeon",
-        "image": "",
+        "image": "pictures/Vaporeon.jpeg",
         "type": "Water",
         "description": "The silliest, and most moist baby."
     },
     {
         "id": 4,
         "name": "Espeon",
-        "image": "",
+        "image": "pictures/Espeon.jpeg",
         "type": "Psychic",
         "description": "Able to feed itself using its telekenetic abilities."
     },
     {
         "id": 5,
         "name": "Umbreon",
-        "image": "",
+        "image": "pictures/Umbreon.jpeg",
         "type": "Dark",
         "description": "The best doge born on the moon, and sent to us as god's gracious dark angel."
     },
     {
         "id": 6,
         "name": "Glaceon",
-        "image": "",
+        "image": "pictures/Glaceon.jpeg",
         "type": "Ice",
         "description": "The coldest of little girls, and is able to freeze solid all that it touches."
     },
     {
         "id": 7,
         "name": "Leafeon",
-        "image": "",
+        "image": "pictures/Leafeon.jpeg",
         "type": "Grass",
         "description": "It's a leaf."
     },
     {
         "id": 8,
         "name": "Sylveon",
-        "image": "",
+        "image": "pictures/Sylveon.jpeg",
         "type": "Fairy",
         "description": "It do got a giant bow though."
     },
     {
         "id": 9,
         "name": "Eevee",
-        "image": "",
+        "image": "pictures/Eevee.jpeg",
         "type": "Normal",
         "description": "It's a brown fluffy doge."
     }
