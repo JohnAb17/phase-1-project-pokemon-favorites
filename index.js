@@ -70,7 +70,10 @@ randomButton.addEventListener('click', function() {
     displayPokemons(randomPokemon);
 });
 
-
+function getRandomPokemon(pokemonList) {
+    const randomIndex = Math.floor(Math.random() * pokemonList.length);
+    return pokemonList[randomIndex];
+}
 
     
 
