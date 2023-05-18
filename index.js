@@ -27,3 +27,15 @@ fetch("https://johnab17.github.io/phase-1-project-pokemon-favorites/")
 
 });
 
+const searchForm = document.getElementById('search-form');
+const searchInput = document.getElementById('search-input');
+
+searchForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const searchQuery = searchInput.value;
+
+    searchInput.value = '';
+
+});
+
