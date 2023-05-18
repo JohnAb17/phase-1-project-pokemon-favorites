@@ -31,14 +31,14 @@ function displayPokemons(pokemons) {
             const card = document.createElement('div');
             card.classList.add('pokemon-card');
 
-            const name = document.createElement('h2');
-            name.classList.add('pokemon-name');
-            name.textContent = pokemons.name;
-
             const image = document.createElement('img');
             image.classList.add('pokemon-image');
             image.src = pokemons.image;
             image.alt = pokemons.name;
+
+            const name = document.createElement('h2');
+            name.classList.add('pokemon-name');
+            name.textContent = pokemons.name;
 
             const type = document.createElement('p');
             type.classList.add('pokemon-type');
