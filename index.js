@@ -3,6 +3,7 @@ console.log("index.js is working!")
 const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
 const pokemonCard = document.getElementById('pokemonCard');
+const randomButton = document.getElementById('random-button');
 
 function handleSearch(event, pokemons) {
     event.preventDefault();
@@ -63,6 +64,12 @@ function displayPokemons(pokemon) {
         pokemonCard.appendChild(message);
     }
 }
+
+randomButton.addEventListener('click', function() {
+    const randomPokemon = getRandomPokemon(pokemons);
+    displayPokemons(randomPokemon);
+});
+
 
 
     
