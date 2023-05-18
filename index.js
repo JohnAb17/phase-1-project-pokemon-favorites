@@ -1,6 +1,6 @@
 console.log("index.js is working!")
 
-fetch("https://johnab17.github.io/phase-1-project-pokemon-favorites/")
+fetch("http://localhost:3000/pokemons")
 .then(response => response.json())
 .then(pokemons => {
     console.log(pokemons);
@@ -51,7 +51,7 @@ searchForm.addEventListener('submit', function(event) {
             pokemonList.appendChild(listItem);
         });
      });
-     
+
     searchInput.value = '';
 
 });
