@@ -29,12 +29,29 @@ fetch("https://johnab17.github.io/phase-1-project-pokemon-favorites/")
 
 const searchForm = document.getElementById('search-form');
 const searchInput = document.getElementById('search-input');
+const pokemonList = document.getElementById('pokemonList');
 
 searchForm.addEventListener('submit', function(event) {
     event.preventDefault();
 
     const searchQuery = searchInput.value;
 
+    fetch('db.json')
+    .then(response => response.json())
+    .then(data => {
+        const filteredPokemons = data.pokemons.filter(pokemon =>
+            pokemon.name.toLowerCase().includes(searchQuery.toLowerCase())
+        );
+
+        pokemonList.textContent = '';
+
+        filteredPokemons.forEach(pokemon => {
+            const listItem = document.createElement('li');
+            listItem.textContent = pokemon.name;
+            pokemonList.appendChild(listItem);
+        });
+     });
+     
     searchInput.value = '';
 
 });
