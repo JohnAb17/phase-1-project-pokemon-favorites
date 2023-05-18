@@ -45,16 +45,32 @@ searchForm.addEventListener('submit', function(event) {
 
         pokemonList.textContent = '';
 
-        filteredPokemons.forEach(pokemon => {
+        filteredPokemons.forEach(pokemons => {
             const container = document.createElement('div');
 
             const pokemonName = document.createElement('h2');
-            pokemonName.textContent = pokemon.name;
+            pokemonName.textContent = pokemons.name;
 
-            const pokemonImage = document
-            const listItem = document.createElement('li');
-            listItem.textContent = pokemon.name;
-            pokemonList.appendChild(listItem);
+            const pokemonImage = document.createElement('img');
+            pokemonImage.src = pokemons.image;
+            pokemonImage.alt = pokemons.name;
+
+            const pokemonType = document.createElement('p');
+            pokemonType.textContent = `Type: ${pokemons.type}`;
+
+            const pokemonDescription = document.createElement('p');
+            pokemonDescription.textContent = pokemons.description;
+
+            container.appendChild(pokemonName);
+            container.appendChild(pokemonImage);
+            container.appendChild(pokemonType);
+            container.appendChild(pokemonDescription);
+
+            document.getElementById('search-results').appendChild(container);
+
+            // const listItem = document.createElement('li');
+            // listItem.textContent = pokemons.name;
+            // pokemonList.appendChild(listItem);
         });
      });
 
