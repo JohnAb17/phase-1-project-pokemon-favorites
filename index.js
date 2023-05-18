@@ -105,7 +105,7 @@ fetch('db.json')
   });
 
 function displayPokemons(pokemons) {
-  pokemonList.innerHTML = '';
+  pokemonList.textContent = '';
 //creating all the info for our cards to be displayed on our webapp
   pokemons.forEach(pokemon => {
     const card = document.createElement('div');
