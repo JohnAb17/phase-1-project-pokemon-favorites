@@ -15,7 +15,7 @@ body {
     font-size: 32px;
 }
 
-#pokemonCard {
+#pokemonList {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
