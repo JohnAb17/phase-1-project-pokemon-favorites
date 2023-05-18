@@ -27,26 +27,26 @@ fetch("db.json")
 function displayPokemons(pokemons) {
     pokemonList.textContent = '';
 
-    pokemons.forEach(pokemons => {
+    pokemons.forEach(pokemon => {
             const card = document.createElement('div');
             card.classList.add('pokemon-card');
 
             const image = document.createElement('img');
             image.classList.add('pokemon-image');
-            image.src = pokemons.image;
-            image.alt = pokemons.name;
+            image.src = pokemon.image;
+            image.alt = pokemon.name;
 
             const name = document.createElement('h2');
             name.classList.add('pokemon-name');
-            name.textContent = pokemons.name;
+            name.textContent = pokemon.name;
 
             const type = document.createElement('p');
             type.classList.add('pokemon-type');
-            type.textContent = `Type: ${pokemons.type}`;
+            type.textContent = `Type: ${pokemon.type}`;
 
             const description = document.createElement('p');
             description.classList.add('pokemon-description');
-            description.textContent = pokemons.description;
+            description.textContent = pokemon.description;
 
             card.appendChild(name);
             card.appendChild(image);
