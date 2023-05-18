@@ -12,21 +12,20 @@ fetch("db.json")
     searchForm.addEventListener('submit', function(event) {
         event.preventDefault();
         
-    
+        const searchQuery = searchInput.value.toLowerCase;
+
+        const filteredPokemons = pokemons.filter(pokemon =>
+            pokemon.name.toLowerCase().includes(searchQuery)
+        );
+
     });
 
 
 });
 
-function pokemonSearch() {
-    const searchQuery = searchInput.value;
 
-    fetch('db.json')
-    .then(response => response.json())
-    .then(data => {
-        const filteredPokemons = data.pokemons.filter(pokemon =>
-            pokemon.name.toLowerCase().includes(searchQuery.toLowerCase())
-        );
+
+    
 
         pokemonList.textContent = '';
 
