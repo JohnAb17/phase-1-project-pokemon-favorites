@@ -7,10 +7,8 @@ const randomButton = document.getElementById('random-button');
 let pokemons = [];
 
 function handleSearch(event, pokemons) {
-    event.preventDefault();
-          
+    event.preventDefault();          
     const searchQuery = searchInput.value.toLowerCase();
-  
     const findPokemons = pokemons.find(pokemon =>
       pokemon.name.toLowerCase().includes(searchQuery)
     );
@@ -18,7 +16,7 @@ function handleSearch(event, pokemons) {
     displayPokemon(findPokemons);
 }
 
-function displayPokemon(pokemon) {
+const displayPokemon = pokemon => {
     pokemonCard.textContent = '';
 
     if (pokemon) {
@@ -66,15 +64,15 @@ fetch("db.json")
   .then(data => {
     pokemons = data.pokemons;
 
-    searchForm.addEventListener('submit', event => handleSearch(event, pokemons));
+    searchForm.addEventListener('submit', handleSearch);
 
     searchInput.addEventListener('keydown', event => {
       if (event.key === 'Enter') {
-        handleSearch(event, pokemons);
+        handleSearch(event);
       }
     });
 
-    randomButton.addEventListener('click', function() {
+    randomButton.addEventListener('click', () => {
       const randomPokemon = getRandomPokemon(pokemons);
       displayPokemon(randomPokemon);
     });
