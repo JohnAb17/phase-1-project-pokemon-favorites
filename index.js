@@ -139,7 +139,7 @@ function displayPokemons(pokemons) {
     card.appendChild(name);
     card.appendChild(type);
     card.appendChild(description);
-
+//appends all elements to the card
     pokemonList.appendChild(card);
   });
 }
