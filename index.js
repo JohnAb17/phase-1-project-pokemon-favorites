@@ -14,20 +14,20 @@ fetch("db.json")
         
         const searchQuery = searchInput.value.toLowerCase;
 
-        const filteredPokemons = pokemons.filter(pokemon =>
+        const findPokemons = pokemons.find(pokemon =>
             pokemon.name.toLowerCase().includes(searchQuery)
         );
         
-        displayPokemons(filteredPokemons);
+        displayPokemons(findPokemons);
     });
 
-    displayPokemons(pokemons);
+    displayPokemons(null);
 });
 
-function displayPokemons(pokemons) {
+function displayPokemons(pokemon) {
     pokemonList.textContent = '';
 
-    pokemons.forEach(pokemon => {
+    if (pokemon) {
             const card = document.createElement('div');
             card.classList.add('pokemon-card');
 
@@ -55,9 +55,13 @@ function displayPokemons(pokemons) {
 
             pokemonList.appendChild(card);
 
-            
-        });
+    } else {
+        const message = document.createElement('p');
+        message.textContent = 'No Pokemon Found, Remember only Eeveelutions here!';
+        pokemonList.appendChild(message);
+    }
 }
+
 
     
 
